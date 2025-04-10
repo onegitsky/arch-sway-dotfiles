@@ -10,6 +10,8 @@ return {
 		local date = os.date("%A, %d %b")
 		local v = vim.version()
 		local version = " " .. v.major .. "." .. v.minor .. "." .. v.patch
+		local plugin_load_time = string.format("%.2f", stats.startuptime) .. "ms"
+
 
 		-- Set header
 		dashboard.section.header.val = {
@@ -39,7 +41,7 @@ return {
 		end
 
 		dashboard.section.footer.val = {
-      centerText("󰂖 ".. stats.loaded .. " Plugins Loaded", 50),
+      centerText("󰂖 ".. stats.loaded .. " Plugins Loaded in " .. plugin_load_time, 50),
       centerText(version, 50),
 			" ",
 			centerText(date, 50),
