@@ -1,0 +1,52 @@
+* {
+	background-image: none;
+	box-shadow: none;
+}
+
+window {
+  font-family: "FiraCode NerdFont", monospace;
+  font-size: 12pt;
+	background-color: rgba(25, 25, 25, 0.9);
+}
+
+button {
+  margin-left: 8px;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  color: #4b4b4b;
+	background-color: rgba(25, 25, 25, 0.75);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 24%;
+}
+
+button:focus, button:active, button:hover {
+	background-color: rgba(35, 35, 35, 0.75);
+  background-size: 30%;
+  border: 3px inset;
+  border-color: rgba(129, 161, 193, 0.5);
+}
+
+#lock {
+    background-image: image(url("/usr/share/wlogout/icons/lock.png"), url("/usr/local/share/wlogout/icons/lock.png"));
+}
+
+#logout {
+    background-image: image(url("/usr/share/wlogout/icons/logout.png"), url("/usr/local/share/wlogout/icons/logout.png"));
+}
+
+#suspend {
+    background-image: image(url("/usr/share/wlogout/icons/suspend.png"), url("/usr/local/share/wlogout/icons/suspend.png"));
+}
+
+#hibernate {
+    background-image: image(url("/usr/share/wlogout/icons/hibernate.png"), url("/usr/local/share/wlogout/icons/hibernate.png"));
+}
+
+#shutdown {
+    background-image: image(url("/usr/share/wlogout/icons/shutdown.png"), url("/usr/local/share/wlogout/icons/shutdown.png"));
+}
+
+#reboot {
+    background-image: image(url("/usr/share/wlogout/icons/reboot.png"), url("/usr/local/share/wlogout/icons/reboot.png"));
+}

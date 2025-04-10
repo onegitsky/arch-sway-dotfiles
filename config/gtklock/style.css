@@ -1,0 +1,53 @@
+window {
+  background-color: #282828;
+  background-image: url("file:///home/username/Pictures/Wallpapers/swww/5.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#window-box {
+  background-color: alpha(#222630, 0.95);
+  border: 1px solid alpha(#c0c8d8, 0.85);
+  border-radius: 35px;
+  padding: 25 3em;
+}
+#clock-label {
+  color: #e5e9f0;
+  min-width: 320px;
+  font-weight: 500;
+  font-size: 9pt;
+  padding: 10px 30px;
+  margin-bottom: -5px;
+  margin-top: -6px;
+}
+#date-label {
+  color: #e5e9f0;
+}
+#input-label {
+  font-size: 0pt;
+}
+#user-name {
+  font-size: 0pt;
+}
+#input-field {
+  color: alpha(#e5e9f0, 0.8);
+  background-color: alpha(#222630, 0);
+  border: 0px solid alpha(#e5e9f0, 0);
+  border-radius: 10px;
+  margin-top: 6px;
+  padding: 2.5px 15px;
+}
+#warning-label,
+#error-label,
+#unlock-button {
+  margin-top: 12px;
+  padding: 10px 2rem;
+}
+#unlock-button {
+  padding: 4px 15px;
+  border-radius: 10px;
+  background-color: alpha(#282828, 0);
+  color: alpha(#1a1a1a, 1);
+  border-radius: 10px;
+  border: 0px solid alpha(#e5e9f0, 0.2);
+}

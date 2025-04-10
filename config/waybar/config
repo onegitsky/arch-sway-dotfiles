@@ -1,0 +1,136 @@
+{
+    "layer": "top",
+    "position": "top",
+    "output": "DP-1",
+    "height": 23,
+    "modules-left": ["custom/scratchpad_indicator","sway/workspaces","custom/arrow4","custom/playerctl","custom/arrow5","custom/cava_mviz"],
+    "modules-center": ["sway/window","sway/mode"],
+    "modules-right": ["custom/arrow2","pulseaudio","custom/arrow3","custom/arrow6","clock#time","custom/arrow5","network","tray",],
+    
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{icon}",
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "urgent": "",
+            "focused": "",
+            "default": ""
+        }
+    },
+    "custom/cava_mviz": {
+        "exec": "$HOME/.config/waybar/custom_modules/WaybarCava.sh",
+        "format": "{}"
+    },
+    "custom/context": {
+        "format": "<span color=\"#eeeeee\"></span>",
+        "on-click": "~/.local/bin/swww_wallpapers.sh",
+        "on-click-middle": "alacritty -o 'window.opacity=0.4' -e cava",
+        "on-click-right": "wlogout",
+        "tooltip": false,
+        "interval": 0
+    },
+    "sway/mode": {
+        "format": "<span style=\"italic\"> {} </span>"
+    },
+    "sway/window": {
+        "format": "{}",
+        "max-length": 40, 
+        "tooltip": false,
+        "all-outputs": true,
+        "icon": true,
+        "icon-size": 14
+    },
+    "tray": {
+        "icon-size": 14,
+        "spacing": 4
+    },
+    "clock#time": {
+        "interval": "1",
+        "format": "󰥔 {:%I:%M%p}",
+        "tooltip": false,
+        //"tooltip-format": "<big>{:%Y %B \t Date: %D }</big>\n<tt>{calendar}</tt>",
+        "on-click": "alacritty -o 'window.opacity=0.7' -e calcurse",
+        "on-click-middle": "~/.local/bin/cleartrash.sh && notify-send 'FBI' 'removed trash'"
+    },
+   "network": {
+        "interval": 15,
+        "format-wifi": "<span color=\"#eeeeee\"></span>",
+        "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": " ",
+        "format-alt": "  {ifname}",
+        "family": "ipv4",
+        "tooltip-format-wifi": "  {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\n {bandwidthUpBits}  {bandwidthDownBits}",
+        "tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n {bandwidthUpBits}  {bandwidthDownBits}",
+        "on-click-right": "nm-connection-editor",
+        "on-click-middle": "python ~/.local/bin/PyConEdit.py"
+    },
+    "pulseaudio": {
+        "scroll-step": 5, // %, can be a float
+        "format": "{icon}  {volume:2}% {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": "<span color=\"#ebdbb2\"></span> 0% {format_source}",
+        "format-source": "<span color=\"#1a1a1a\"> {volume:2}%</span>",
+        "format-source-muted": "<span color=\"#3d3d3d\"></span>",
+        "max-volume": 125,
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click-middle": "pavucontrol",
+        "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "tooltip": false,
+    },
+    "custom/playerctl": {
+        "exec": "~/.config/waybar/custom_modules/media-player-status.py --player=spotify",
+        "return-type": "json",
+        "on-click": "playerctl -p spotify play-pause",
+        "on-click-middle": "playerctl -p spotify volume 0.5 && notify-send 'Spotify' '50% Volume Set!'$(playerctl -p spotify metadata --format '{{duration(position)}}/{{duration(mpris:length)}}')",
+        "on-click-right": "playerctl -p spotify volume 0.6 && notify-send 'Spotify' $(playerctl -p spotify metadata --format '{{duration(position)}}/{{duration(mpris:length)}} 󰕾 {{volume * 100}}%')",
+        "on-scroll-up": "playerctl -p spotify volume 0.2+ && notify-send 'Spotify' $(playerctl -p spotify metadata --format '{{duration(position)}}/{{duration(mpris:length)}} 󰕾 {{volume * 100}}%')",
+        "on-scroll-down": "playerctl -p spotify volume 0.2- && notify-send 'Spotify' $(playerctl -p spotify metadata --format '{{duration(position)}}/{{duration(mpris:length)}} 󰕾 {{volume * 100}}%')",
+        "tooltip": false,
+    },
+    "custom/scratchpad_indicator": {
+        "interval": 1,
+        "exec": "swaymsg -t get_tree | ~/.config/waybar/custom_modules/scratchpads.py",
+        "format": "󱂬 {}",
+        "on-click": "~/.local/bin/swww_wallpapers.sh",
+        "on-click-middle": "alacritty -o 'window.opacity=0.7' -e cava",
+        "on-click-right": "swaymsg 'scratchpad show'",
+        "tooltip": false
+    },
+    "custom/arrow2": {
+        "format": "",
+        "tooltip": false,
+    },
+    "custom/arrow3": {
+        "format": "",
+        "tooltip": false
+    },
+    "custom/arrow4": {
+        "format": "",
+        "tooltip": false
+    },
+    "custom/arrow5": {
+        "format": "",
+        "tooltip": false
+    },
+
+    "custom/arrow6": {
+        "format": "",
+        "tooltip": false
+    },
+}

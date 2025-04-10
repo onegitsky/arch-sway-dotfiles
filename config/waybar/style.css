@@ -1,0 +1,186 @@
+@keyframes blink-warning {
+    70% {
+        color: @light;
+    }
+
+    to {
+        color: @light;
+        background-color: @warning;
+    }
+}
+
+@keyframes blink-critical {
+    70% {
+      color: @light;
+    }
+
+    to {
+        color: @light;
+        background-color: @critical;
+    }
+}
+
+@keyframes blink-resize {
+    25% {
+      color: #eeeeee;
+    }
+
+    to {
+        color: #9d0006;
+    }
+}
+/* change this */
+@define-color light #D8DEE9;
+@define-color warning #ebcb8b;
+@define-color nord_bg #282828;
+@define-color nord_bg_blue @bg;
+@define-color nord_light #D8DEE9;
+@define-color nord_dark_font #272727;
+@define-color bg #1a1a1a;
+@define-color critical #cc241d;
+@define-color tray @bg;
+@define-color mode @bg;
+@define-color bluetint #448488;
+@define-color bluelight #83a597;
+@define-color magenta-dark #b16185;
+@define-color font_gruv_normal #ebdbb2;
+@define-color font_gruv_faded #a89985;
+@define-color font_gruv_darker #D8DEE9;
+@define-color font_dark_alternative #655b53;
+
+* {
+    font-family: "FiraMono NerdFont";
+    border: solid;
+    border-radius: 0px;
+    min-height: 0;
+    font-weight: bold;
+}
+
+#waybar {
+    background: rgba(30, 30, 30, 0.95);
+    font-family: "FiraMono NerdFont";
+    font-size: 8.6pt;
+    font-weight: bold;
+}
+.modules-left {
+    padding-left:4.5px;
+}
+.modules-right {
+    padding-right:4.5px
+}
+#custom-cava_mviz {
+    color: #5e81ac;
+    margin-left: 3px;
+    padding: 0 8 0 8px;
+}
+#mode {
+    animation-name: blink-resize;
+    animation-duration: 4s;
+}
+#network.disconnected {
+    color: #818181;
+    padding: 0 13 0 7px;
+    margin-top: 2px;
+    margin-left: 3px;
+    margin-right: -6px;
+    margin-bottom: 2px;
+}
+#clock.time {
+    background-color: #81a1c1;
+    color: #1a1a1a;
+    padding: 0 8 0 8px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+#custom-scratchpad_indicator {
+    font-size: 12;
+    color: #eeeeee;
+    padding: 0 8 0 8px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+#custom-playerctl {
+    color: #1a1a1a;
+    background: #81a1c1;
+    padding: 0 8 0 8px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+#custom-playerctl.paused{
+    color: #3d3d3d;
+    padding: 0 8 0 8px;
+}
+#workspaces button {
+    color: #eeeeee;
+    padding: 0em 0.44em;
+    margin-right: 2px;
+    min-width: 0em;
+}
+#workspaces button.focused {
+    color: #eeeeee;
+}
+#workspaces button.urgent {
+}
+#custom-arrow4 {
+    color: #81a1c1;
+    margin-top: 0.1px;
+    font-size: 14.5;
+    margin-left: 5px;
+}
+#custom-arrow5 {
+    color: #81a1c1;
+    margin-bottom: 0.1px;
+    font-size: 15;
+}
+#custom-arrow2 {
+    color: #b74e58;
+    margin-top: 0.1px;
+    font-size: 14.5;
+}
+#custom-arrow3 {
+    margin-right: -0.6px;
+    color: #b74e58;
+    margin-bottom: 0.1px;
+    font-size: 15;
+}
+#custom-arrow6 {
+    color: #81a1c1;
+    margin-top: 0.1px;
+    font-size: 14.5;
+    margin-left: 5px;
+}
+#pulseaudio {
+    background-color: #b74e58;
+    color: #1a1a1a;
+    padding: 0 8 0 8px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    box-shadow: 0 0 0 0px #1a1a1a;
+}
+#pulseaudio.muted {
+    color: #3d3d3d;
+    padding: 0 8 0 8px;
+}
+#network {
+    color: #eeeeee;
+    padding: 0 13 0 7px;
+    margin-top: 2px;
+    margin-left: 3px;
+    margin-bottom: 2px;
+}
+#tray {
+    padding: 0 8 0 8px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+#mode {
+    color: #eeeeee;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: 2px;
+}
+#window {
+    color: #eeeeee;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
