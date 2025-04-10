@@ -1,7 +1,8 @@
 # 🧙🏽‍♂️ Sway + Arch Dotfiles! 🧙🏽‍♂️
 <br>
 
-**󰔎 GTK Theme:** Nordzy-Dark <br>  
+**󰔎 GTK Theme:** Nordic-darker-v40 <br>  
+**󰔎 Icons:** Nordzy-Dark <br>  
 **󰔎 Browser Theme:** Nord <br>  
 ** Font:** FiraCode Nerd Font <br>  
 **󰮫 DMENU:** tofi <br>  
