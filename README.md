@@ -2,8 +2,9 @@
 <br>
 
 **󰔎 GTK Theme:** Nordic-darker-v40 <br>  
-**󰔎 Icons:** Nordzy-Dark <br>  
+**󰔎 Icons:** Nordzy-dark <br>  
 **󰔎 Browser Theme:** Nord <br>  
+**󰆽 Cursor:** WhiteSur <br>  
 ** Font:** FiraCode Nerd Font <br>  
 **󰮫 DMENU:** tofi <br>  
 **󰤄 Power Menu:** wlogout <br>  
