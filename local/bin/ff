@@ -1,0 +1,28 @@
+#!/bin/zsh
+# fetch minimal re-write
+echo " "
+
+#ASCII, Birthday
+echo "\e[95m$(cat ~/.local/share/fetch.txt)\e[0m"
+# Set the date of when you installed your OS
+echo "--------------------------------- | \e[93m $(( ($(date +%s) - $(date +%s -ud '2024-12-28 17:30')) / 3600 / 24 ))\e[0m Days Old"
+
+# UNAME, HNAME, TRASH
+echo "\e[0;90m\e[0m \e[4;37m$(whoami)\e[0;90m@\e[0m\e[4;37m$(uname -n)\e[0m                    | \e[90m\e[0m Items: $(ls ~/.local/share/Trash/files | wc -l)"
+
+# CPU, Uptime.
+echo " \e[31m\e[0m $(sed -n 5p /proc/cpuinfo | cut -c 18-37)"
+echo " \e[31m╰─\e[0m(\e[91m\e[0m $(uptime --pretty | cut -c 4-24))"
+
+# RAM, Available, Cached, Free, USAGE(%)
+echo " \e[32m\e[0m Kingston 32GB | 1800MT/s"
+echo " \e[32m╰─\e[0m($(free -h | awk '/Mem:/{print $7}') / $(free -h | awk '/Mem:/{print $3}') / \e[96m$(free -m | awk 'NR==2{printf "%.2f%%\t\t",$3*100/$2}' | cut -c 1-6)\e[0m)"
+
+# DISTRO, KERNEL AND DEFAULT SHELL
+echo " \e[33m\e[0m $(lsb_release -a | awk '/Description:/{print $0}' | cut -c 14-23)"
+echo " \e[33m├─\e[0m($(uname -r))"
+echo " \e[33m╰──\e[0m($($SHELL --version | cut -c 1-7))"
+
+# PKGS, pac, aur, flat
+echo " \e[34m\e[0m Packages"
+echo " \e[34m╰─\e[0m(\e[91my\e[0m\e[92ma\e[0m\e[94my\e[0m $(yay -Q | wc -l))"
