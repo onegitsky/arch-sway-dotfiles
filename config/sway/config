@@ -114,7 +114,7 @@ set $gtklock gtklock -m userinfo-module
 include /etc/sway/config.d/*
 exec {
 gsettings set org.gnome.desktop.interface gtk-theme 'Nordic-darker-v40'
-gsettings set org.gnome.desktop.interface icon-theme 'Flat-Remix-Teal-Dark'
+gsettings set org.gnome.desktop.interface icon-theme 'Nordzy-dark'
 gsettings set org.gnome.desktop.interface font-name 'Firacode NerdFont'
 dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 }
