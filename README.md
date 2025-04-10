@@ -1,5 +1,5 @@
 # 🧙🏽‍♂️ Sway + Arch Dotfiles! 🧙🏽‍♂️
-> A man who doesn't like ~~anime boobs~~ Linux is no man of my army - Sun Tzu
+> A man who doesn't like Linux is no man of my army - Sun Tzu
 ## Contents
 + **󰔎 GTK Theme:** [Nordic-darker-v40](https://github.com/EliverLara/Nordic) <br>
 + **󰔎 Icons:** [Nordzy-dark](https://github.com/MolassesLover/Nordzy-icon) <br>
