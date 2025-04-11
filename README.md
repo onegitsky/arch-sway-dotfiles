@@ -1,5 +1,5 @@
 # 🧙🏽‍♂️ Sway + Arch Dotfiles! 🧙🏽‍♂️
-> ragebait - Sun Tzu
+> illusion of control
 ## Contents
 + **󰔎 GTK Theme:** [Nordic-darker-v40](https://github.com/EliverLara/Nordic) <br>
 + **󰔎 Icons:** [Nordzy-dark](https://github.com/MolassesLover/Nordzy-icon) <br>
