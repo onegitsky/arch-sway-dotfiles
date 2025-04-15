@@ -1,8 +1,8 @@
 {
-    "layer": "top",
-    "position": "top",
+    "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
     "output": "DP-1",
-    "height": 23,
+    "height": 23, // Waybar height (to be removed for auto height)
     "modules-left": ["custom/scratchpad_indicator","sway/workspaces","custom/arrow4","custom/playerctl","custom/arrow5","custom/cava_mviz"],
     "modules-center": ["sway/window","sway/mode"],
     "modules-right": ["custom/arrow2","pulseaudio","custom/arrow3","custom/arrow6","clock#time","custom/arrow5","network","tray",],
@@ -54,10 +54,32 @@
         "format": "󰥔 {:%I:%M%p}",
         "tooltip": false,
         //"tooltip-format": "<big>{:%Y %B \t Date: %D }</big>\n<tt>{calendar}</tt>",
-        "on-click": "alacritty -o 'window.opacity=0.7' -e calcurse",
-        "on-click-middle": "~/.local/bin/cleartrash.sh && notify-send 'FBI' 'removed trash'"
+        "on-click": "kitty -e calcurse",
+        "on-click-middle": "~/.local/bin/waybar-scripts/cleartrash.sh"
     },
-   "network": {
+    "temperature": {
+        //"thermal-zone": 1,
+        "interval": "15",
+        "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
+        "critical-threshold": 75,
+        "format-critical": "  {temperatureC}°C",
+        "format": "{icon} {temperatureC}°C",
+        "format-icons": ["", "", ""],
+        "max-length": 6,
+        "min-length": 6,
+        "tooltip": false
+    },
+    "cpu": {
+        "interval": 15,      
+        "format": " {usage:2}%",
+        "tooltip": false
+    },
+    "memory": {
+        "interval": 15,
+        "format": "  {percentage}%",
+        "tooltip": false
+    },
+    "network": {
         "interval": 15,
         "format-wifi": "<span color=\"#eeeeee\"></span>",
         "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
@@ -68,7 +90,7 @@
         "tooltip-format-wifi": "  {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\n {bandwidthUpBits}  {bandwidthDownBits}",
         "tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n {bandwidthUpBits}  {bandwidthDownBits}",
         "on-click-right": "nm-connection-editor",
-        "on-click-middle": "python ~/.local/bin/PyConEdit.py"
+        "on-click-middle": "~/.local/bin/waybar-scripts/wifimenu.py"
     },
     "pulseaudio": {
         "scroll-step": 5, // %, can be a float
@@ -97,18 +119,18 @@
         "exec": "~/.config/waybar/custom_modules/media-player-status.py --player=spotify",
         "return-type": "json",
         "on-click": "playerctl -p spotify play-pause",
-        "on-click-middle": "playerctl -p spotify volume 0.5 && notify-send 'Spotify' '50% Volume Set!'$(playerctl -p spotify metadata --format '{{duration(position)}}/{{duration(mpris:length)}}')",
-        "on-click-right": "playerctl -p spotify volume 0.6 && notify-send 'Spotify' $(playerctl -p spotify metadata --format '{{duration(position)}}/{{duration(mpris:length)}} 󰕾 {{volume * 100}}%')",
-        "on-scroll-up": "playerctl -p spotify volume 0.2+ && notify-send 'Spotify' $(playerctl -p spotify metadata --format '{{duration(position)}}/{{duration(mpris:length)}} 󰕾 {{volume * 100}}%')",
-        "on-scroll-down": "playerctl -p spotify volume 0.2- && notify-send 'Spotify' $(playerctl -p spotify metadata --format '{{duration(position)}}/{{duration(mpris:length)}} 󰕾 {{volume * 100}}%')",
+        "on-click-middle": "~/.local/bin/waybar-scripts/spot-skip.py && playerctl -p spotify next",
+        "on-click-right": "playerctl -p spotify volume 0.6 && ~/.local/bin/waybar-scripts/spot-dunst.sh",
+        "on-scroll-up": "playerctl -p spotify volume 0.1+ && ~/.local/bin/waybar-scripts/spot-dunst.sh",
+        "on-scroll-down": "playerctl -p spotify volume 0.1- && ~/.local/bin/waybar-scripts/spot-dunst.sh",
         "tooltip": false,
     },
     "custom/scratchpad_indicator": {
         "interval": 1,
         "exec": "swaymsg -t get_tree | ~/.config/waybar/custom_modules/scratchpads.py",
         "format": "󱂬 {}",
-        "on-click": "~/.local/bin/swww_wallpapers.sh",
-        "on-click-middle": "alacritty -o 'window.opacity=0.7' -e cava",
+        "on-click": "~/.local/bin/waybar-scripts/swww.py",
+        "on-click-middle": "kitty -e cava",
         "on-click-right": "swaymsg 'scratchpad show'",
         "tooltip": false
     },
@@ -128,7 +150,6 @@
         "format": "",
         "tooltip": false
     },
-
     "custom/arrow6": {
         "format": "",
         "tooltip": false
