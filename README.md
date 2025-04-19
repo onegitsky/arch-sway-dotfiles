@@ -9,7 +9,7 @@
 + ** Font:** [FiraCode NerdFont](https://github.com/tonsky/FiraCode) <br>
 + **󰮫 DMENU:** [tofi](https://github.com/philj56/tofi) <br>
 + **󰤄 Power Menu:** [rofi](https://github.com/adi1090x/rofi) <br>
-+ ** Terminal:** [kitty](https://github.com/kovidgoyal/kitty) <br>
++ ** Terminal:** [foot](https://codeberg.org/dnkl/foot) <br>
 + ** Lock Screen:** [GTKLock](https://github.com/jovanlanik/gtklock) <br>
 + ** Status Bar:** [waybar](https://github.com/Alexays/Waybar) <br>
 + **󰄨 Visualizer:** [cava](https://github.com/karlstav/cava) <br>
