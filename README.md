@@ -5,7 +5,7 @@
 + **󰔎 Icons:** [Nordzy-dark](https://github.com/MolassesLover/Nordzy-icon) <br>
 + **󰔎 Browser Theme:** [Nord](https://addons.mozilla.org/en-US/firefox/addon/nord-firefox/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search) <br>
 + **󰔎 ZSH Theme:** [powerlevel10k](https://github.com/romkatv/powerlevel10k) <br>
-+ **󰆽 Cursor:** [WhiteSur](https://github.com/vinceliuice/WhiteSur-cursors) <br>
++ **󰆽 Cursor:** [WinSur-Dark](https://github.com/yeyushengfan258/WinSur-dark-cursors) <br>
 + ** Font:** [JetBrainsMono NF](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/JetBrainsMono.zip) <br>
 + **󰮫 DMENU:** [tofi](https://github.com/philj56/tofi) <br>
 + **󰤄 Power Menu:** [rofi](https://github.com/adi1090x/rofi) <br>
