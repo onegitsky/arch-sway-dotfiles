@@ -8,7 +8,7 @@
 + **󰆽 Cursor:** [WhiteSur](https://github.com/vinceliuice/WhiteSur-cursors) <br>
 + ** Font:** [FiraCode NerdFont](https://github.com/tonsky/FiraCode) <br>
 + **󰮫 DMENU:** [tofi](https://github.com/philj56/tofi) <br>
-+ **󰤄 Power Menu:** [wlogout](https://github.com/ArtsyMacaw/wlogout) <br>
++ **󰤄 Power Menu:** [rofi](github.com/adi1090x/rofi) <br>
 + ** Terminal:** [kitty](https://github.com/kovidgoyal/kitty) <br>
 + ** Lock Screen:** [GTKLock](https://github.com/jovanlanik/gtklock) <br>
 + ** Status Bar:** [waybar](https://github.com/Alexays/Waybar) <br>
