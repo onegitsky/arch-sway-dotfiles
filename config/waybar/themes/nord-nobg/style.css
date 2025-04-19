@@ -1,0 +1,181 @@
+@keyframes blink-warning {
+    70% {
+        color: @light;
+    }
+
+    to {
+        color: @light;
+        background-color: @warning;
+    }
+}
+
+@keyframes blink-critical {
+    70% {
+      color: @light;
+    }
+
+    to {
+        color: @light;
+        background-color: @critical;
+    }
+}
+
+@keyframes blink-resize {
+    25% {
+      color: #eeeeee;
+    }
+
+    to {
+        color: #9d0006;
+    }
+}
+
+@define-color light #D8DEE9;
+@define-color warning #ebcb8b;
+@define-color nord_bg #282828;
+@define-color nord_bg_blue @bg;
+@define-color nord_light #D8DEE9;
+@define-color nord_dark_font #272727;
+@define-color bg #1a1a1a;
+@define-color critical #cc241d;
+@define-color tray @bg;
+@define-color mode @bg;
+@define-color bluetint #448488;
+@define-color bluelight #83a597;
+@define-color magenta-dark #b16185;
+@define-color font_gruv_normal #ebdbb2;
+@define-color font_gruv_faded #a89985;
+@define-color font_gruv_darker #D8DEE9;
+@define-color font_dark_alternative #655b53;
+
+* {
+    font-family: "JetBrainsMono NerdFont";
+    border: solid;
+    border-radius: 0px;
+    min-height: 0;
+    font-weight: bold;
+}
+
+#waybar {
+    background: rgba(30, 30, 30, 0.95);
+    font-family: "JetBrainsMono NerdFont";
+    font-size: 8.6pt;
+    font-weight: Bold;
+}
+.modules-left {
+    padding-left:4.5px;
+}
+.modules-right {
+    padding-right:4.5px
+}
+
+#custom-context {
+    color: #edffd9;
+    padding: 0 8 0 8px;
+    margin-right: 5px;
+}
+
+#custom-cava_mviz {
+    color: #5e81ac;
+    margin-left: 4px;
+    padding: 0 8 0 8px;
+}
+
+#mode {
+    animation-name: blink-resize;
+    animation-duration: 4s;
+}
+#network.disconnected {
+    font-size: 11px;
+    color: #818181;
+    padding: 0 8 0 8px;
+    margin-top: 2px;
+    margin-left: 3px;
+    margin-right: -6px;
+    margin-bottom: 2px;
+}
+
+#clock.time {
+    font-size: 11;
+    color: #81a1c1;
+    padding: 0 8 0 8px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 3px;
+}
+
+#custom-scratchpad_indicator {
+    font-size: 11;
+    color: #c0c8d8;
+    padding: 0 8 0 8px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+#custom-playerctl {
+    font-size: 11;
+    color: #81a1c1;
+    padding: 0 8 0 8px;
+    margin-top: 2px;
+    margin-bottom:2px;
+    margin-left: 6px;
+}
+#custom-playerctl.paused{
+    color: #4c566a;
+    padding: 0 8 0 8px;
+}
+
+#workspaces button {
+    font-size: 11px;
+    color: #c0c8d8;
+    padding: 0em 0.44em;
+    margin-right: 2px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 2px;
+    min-width: 0em;
+}
+#workspaces button.focused {
+    color: #c0c8d8;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+#pulseaudio {
+    font-size: 11;
+    color: #b74e58;
+    padding: 0 8 0 8px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+#pulseaudio.muted {
+    color: #4c566a;
+    padding: 0 8 0 8px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+#network {
+    color: #b1c89d;
+    font-size: 11px;
+    padding: 0 8 0 8px;
+    margin-top: 2px;
+    margin-left: 3px;
+    margin-bottom: 2px;
+}
+#tray {
+    padding: 0 8 0 8px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 2px;
+}
+#mode {
+    color: #eeeeee;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 2px;
+}
+#window {
+    font-size: 11px;
+    color: #eeeeee;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
