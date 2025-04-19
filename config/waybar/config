@@ -5,7 +5,7 @@
     "height": 23, // Waybar height (to be removed for auto height)
     "modules-left": ["custom/scratchpad_indicator","sway/workspaces","custom/arrow4","custom/playerctl","custom/arrow5","custom/cava_mviz"],
     "modules-center": ["sway/window","sway/mode"],
-    "modules-right": ["custom/arrow2","pulseaudio","custom/arrow3","custom/arrow6","clock#time","custom/arrow5","network","tray",],
+    "modules-right": ["custom/arrow2","pulseaudio","custom/arrow3","custom/arrow6","clock#time","custom/arrow5","tray",],
     
     "sway/workspaces": {
         "disable-scroll": true,
