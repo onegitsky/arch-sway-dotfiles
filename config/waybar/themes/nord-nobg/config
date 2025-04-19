@@ -49,10 +49,10 @@
         "tooltip": false,
         "all-outputs": true,
         "icon": true,
-        "icon-size": 13
+        "icon-size": 14
     },
     "tray": {
-        "icon-size": 13,
+        "icon-size": 14,
         "spacing": 4
     },
     "clock#time": {
@@ -60,7 +60,7 @@
         "format": "󰥔 {:%I:%M%p}",
         "tooltip": false,
         //"tooltip-format": "<big>{:%Y %B \t Date: %D }</big>\n<tt>{calendar}</tt>",
-        "on-click": "kitty -e calcurse",
+        "on-click": "foot -e calcurse",
         "on-click-middle": "~/.local/bin/waybar-scripts/cleartrash.sh"
     },
     "temperature": {
