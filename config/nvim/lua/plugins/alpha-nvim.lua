@@ -10,10 +10,8 @@ return {
 		local date = os.date("%A, %d %b")
 		local v = vim.version()
 		local version = " " .. v.major .. "." .. v.minor .. "." .. v.patch
-		local plugin_load_time = string.format("%.2f", stats.startuptime) .. "ms"
+    local plugin_load_time = string.format("%.2f", stats.startuptime) .. "ms"
 
-
-		-- Set header
 		dashboard.section.header.val = {
 " ████     ██ ████████   ███████   ██      ██ ██ ████     ████",
 "░██░██   ░██░██░░░░░   ██░░░░░██ ░██     ░██░██░██░██   ██░██",
@@ -41,17 +39,13 @@ return {
 		end
 
 		dashboard.section.footer.val = {
-      centerText("󰂖 ".. stats.loaded .. " Plugins Loaded in " .. plugin_load_time, 50),
+      centerText("󰂖 ".. stats.loaded .. "/" .. stats.count .. " Plugins Loaded in " .. plugin_load_time, 52.5),
       centerText(version, 50),
 			" ",
 			centerText(date, 50),
 			centerText(time, 50),
 		}
-
-		-- Send config to alpha
 		alpha.setup(dashboard.opts)
-
-		-- Disable folding on alpha buffer
 		vim.cmd([[autocmd FileType alpha setlocal nofoldenable]])
 	end,
 }
