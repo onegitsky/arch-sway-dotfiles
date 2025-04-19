@@ -6,8 +6,7 @@ window {
   background-position: center;
 }
 #window-box {
-  background-color: alpha(#222630, 0.95);
-  border: 1px solid alpha(#c0c8d8, 0.85);
+  background-color: alpha(#222222, 0.98);
   border-radius: 35px;
   padding: 25 3em;
 }
@@ -31,14 +30,10 @@ window {
 }
 #input-field {
   color: alpha(#e5e9f0, 0.8);
-  background-color: alpha(#222630, 0);
-  border: 0px solid alpha(#e5e9f0, 0);
   border-radius: 10px;
   margin-top: 6px;
   padding: 2.5px 15px;
 }
-#warning-label,
-#error-label,
 #unlock-button {
   margin-top: 12px;
   padding: 10px 2rem;
@@ -46,8 +41,7 @@ window {
 #unlock-button {
   padding: 4px 15px;
   border-radius: 10px;
-  background-color: alpha(#282828, 0);
+  background-color: #60728a;
   color: alpha(#1a1a1a, 1);
   border-radius: 10px;
-  border: 0px solid alpha(#e5e9f0, 0.2);
 }
