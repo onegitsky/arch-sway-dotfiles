@@ -1,5 +1,5 @@
 # 🧙🏽‍♂️ Sway + Arch Dotfiles! 🧙🏽‍♂️
-> illusion of control
+> Defaults always change after a while but I always keep the config files here.
 ## Contents
 + **󰔎 GTK Theme:** [Nordic-darker-v40](https://github.com/EliverLara/Nordic) <br>
 + **󰔎 Icons:** [Nordzy-dark](https://github.com/MolassesLover/Nordzy-icon) <br>
