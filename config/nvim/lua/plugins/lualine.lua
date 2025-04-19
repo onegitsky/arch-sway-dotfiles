@@ -1,41 +1,86 @@
 return {
-  {
-    "nvim-lualine/lualine.nvim",
-    opts = function()
-      local nordic = require("lualine.themes.nordic")
-      nordic.normal.c.bg = "none"
-      nordic.insert.c.bg = "none"
-      nordic.visual.c.bg = "none"
-      nordic.replace.c.bg = "none"
-      nordic.command.c.bg = "none"
-      nordic.normal.b.bg = "none"
-      nordic.normal.a.fg = "#191D24"
-      nordic.normal.a.bg = "#5e81ac"
-      return {
-        options = {
-          theme = nordic,
-          component_separators = { left = "", right = "" },
-          section_separators = { left = "", right = "" },
-          disabled_filetypes = { statusline = {}, winbar = {} },
-          globalstatus = true,
-        },
-        sections = {
-          lualine_a = { "mode" },
-          lualine_b = { "branch", "diff" },
-          lualine_c = { "filename" },
-          lualine_x = { "encoding", "fileformat", "filetype" },
-          lualine_y = { "progress" },
-          lualine_z = { "location" },
-        },
-        inactive_sections = {
-          lualine_a = {},
-          lualine_b = {},
-          lualine_c = { "filename" },
-          lualine_x = { "location" },
-          lualine_y = {},
-          lualine_z = {},
-        },
-      }
-    end,
-  },
+	"nvim-lualine/lualine.nvim",
+	dependencies = { "nvim-tree/nvim-web-devicons" },
+	config = function()
+		local lualine = require("lualine")
+		local lazy_status = require("lazy.status")
+
+		local colors = {
+            color0 = "#1e222a",
+            color1 = "#ff5874",
+            color2 = "#c0c8d8",
+			color3 = "#AA00",
+			color6 = "#c0c8d8",
+			color7 = "#5e81ac",
+			color8 = "#ae81ff",
+		}
+		local my_lualine_theme = {
+			replace = {
+				a = { fg = colors.color0, bg = colors.color1, gui = "bold" },
+				b = { fg = colors.color2, bg = colors.color3 },
+			},
+			inactive = {
+				a = { fg = colors.color6, bg = colors.color3, gui = "bold" },
+				b = { fg = colors.color6, bg = colors.color3 },
+				c = { fg = colors.color6, bg = colors.color3 },
+			},
+			normal = {
+				a = { fg = colors.color0, bg = colors.color7, gui = "bold" },
+				b = { fg = colors.color2, bg = colors.color3 },
+				c = { fg = colors.color2, bg = colors.color3 },
+			},
+			visual = {
+				a = { fg = colors.color0, bg = colors.color8, gui = "bold" },
+				b = { fg = colors.color2, bg = colors.color3 },
+			},
+			insert = {
+				a = { fg = colors.color0, bg = colors.color2, gui = "bold" },
+				b = { fg = colors.color2, bg = colors.color3 },
+			},
+		}
+
+        local mode = {
+            'mode',
+            fmt = function(str)
+                return ' ' .. str
+            end,
+        }
+
+        local diff = {
+            'diff',
+            colored = true,
+            symbols = { added = ' ', modified = ' ', removed = ' ' },
+        }
+
+        local filename = {
+            'filename',
+            file_status = true,
+            path = 0,
+        }
+
+        local branch = {'branch', icon = {'', color={fg='#A6D4DE'}}, '|'}
+
+
+		lualine.setup({
+            icons_enabled = true,
+			options = {
+				theme = my_lualine_theme,
+				component_separators = { left = "", right = "" },
+				section_separators = { left = "", right = "" },
+			},
+			sections = {
+                lualine_a = { mode },
+                lualine_b = { branch },
+                lualine_c = { diff, filename },
+				lualine_x = {
+					{
+						lazy_status.updates,
+						cond = lazy_status.has_updates,
+						color = { fg = "#ff9e64" },
+					},
+					{ "filetype" },
+				},
+			},
+		})
+	end,
 }
