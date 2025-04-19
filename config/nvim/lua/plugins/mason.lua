@@ -40,6 +40,7 @@ return {
                 "cssls",
                 "emmet_ls",
                 "emmet_language_server",
+                "pylsp",
                 -- "eslint",
                 "marksman",
             },
