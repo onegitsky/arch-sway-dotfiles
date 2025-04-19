@@ -4,9 +4,9 @@ import html
 import json
 import gi
 import sys
-import argparse  # Import argparse for handling command-line arguments
+import argparse
 gi.require_version('Playerctl', '2.0')
-from gi.repository import Playerctl, GLib  # noqa: E402
+from gi.repository import Playerctl, GLib
 
 ARTIST = 'xesam:artist'
 TITLE = 'xesam:title'
@@ -15,7 +15,7 @@ ICONS = {
     'ncspot': ' ',
     'vlc': '󰕼 ',
     'firefox': ' ',
-    'default': ' ',
+    'default': '<span color="#1db954"> </span>',
     'paused': ''
 }
 
@@ -26,7 +26,6 @@ def find_active_player(manager, vanished_player, target_player=None):
     for player in manager.props.players:
         if player == vanished_player:
             continue
-        # If a target player is specified, only return that player
         if target_player and player.props.player_name != target_player:
             continue
         if player.props.playback_status != Playerctl.PlaybackStatus.STOPPED:
@@ -126,12 +125,10 @@ def init_manager(target_player=None):
 
 
 if __name__ == '__main__':
-    # Set up argument parser
     parser = argparse.ArgumentParser(description='Monitor a specific media player.')
     parser.add_argument('--player', type=str, help='Specify the player to monitor (e.g., spotify, vlc)')
     args = parser.parse_args()
 
-    # Pass the target player to the manager
     init_manager(target_player=args.player)
     main = GLib.MainLoop()
     main.run()
