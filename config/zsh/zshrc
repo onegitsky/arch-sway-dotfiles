@@ -44,8 +44,10 @@ setopt EXTENDED_HISTORY
    export EDITOR='nvim'
    export VISUAL='nvim'
    alias v='nvim'
+   alias sv='sudo -E nvim'
    alias tclock='tty-clock -s -c -C 4 -b -t'
-   alias overseer='/home/username/.local/bin/zsh-plugin-manager.py'
+   alias pipes.sh='pipes.sh -R -b -p 8 -r 3500'
+   alias alarm='~/.local/bin/alarm/alarm.sh'
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
@@ -55,3 +57,4 @@ source /usr/share/zsh/plugins/zsh-auto-notify/auto-notify.plugin.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 source /usr/share/zsh/plugins/zsh-you-should-use/zsh-you-should-use.plugin.zsh
 source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+source /usr/share/zsh/plugins/zsh-completions/zsh-completions.plugin.zsh
