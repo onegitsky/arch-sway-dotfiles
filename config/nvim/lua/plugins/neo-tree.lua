@@ -1,3 +1,5 @@
+-- I dont use this now, I instead use nvim-tree.
+
 return {
 	{
   "nvim-neo-tree/neo-tree.nvim",
