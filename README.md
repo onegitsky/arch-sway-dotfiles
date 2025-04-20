@@ -14,3 +14,6 @@
 + **󰔎 Browser Theme:** [Nord](https://addons.mozilla.org/en-US/firefox/addon/nord-firefox/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search) <br>
 + **󰆽 Cursor:** [WinSur-Dark](https://github.com/yeyushengfan258/WinSur-dark-cursors) <br>
 + ** Font:** [JetBrainsMono NF](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/JetBrainsMono.zip) <br>
+
+## Preview
+![Image](https://github.com/user-attachments/assets/a293e0d4-6bbb-4862-84d0-4d572380e104)
