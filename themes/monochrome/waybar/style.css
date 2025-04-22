@@ -61,7 +61,8 @@
 #custom-cava_mviz {
     color: #1db954;
     margin-bottom: 3px;
-    margin-top: 3px; 
+    margin-top: 3px;
+    margin-left: 4px;
     padding: 0 8 0 4px;
 }
 
@@ -92,7 +93,7 @@
     padding: 0 8 0 8px;
     margin-top: 3px;
     margin-bottom:3px;
-    margin-left: 3px;
+    margin-left: 4px;
 }
 #custom-playerctl.paused{
     color: #4c566a;
