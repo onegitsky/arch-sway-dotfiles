@@ -52,16 +52,10 @@
     font-weight: Bold;
 }
 .modules-left {
-    padding-left:4.5px;
+    padding-left:0px;
 }
 .modules-right {
-    padding-right:4.5px
-}
-
-#custom-context {
-    color: #edffd9;
-    padding: 0 8 0 8px;
-    margin-right: 5px;
+    padding-right:0px
 }
 
 #custom-cava_mviz {
@@ -74,15 +68,6 @@
 #mode {
     animation-name: blink-resize;
     animation-duration: 4s;
-}
-#network.disconnected {
-    font-size: 11px;
-    color: #818181;
-    padding: 0 8 0 8px;
-    margin-top: 2px;
-    margin-left: 3px;
-    margin-right: -6px;
-    margin-bottom: 2px;
 }
 
 #clock.time {
@@ -118,14 +103,14 @@
     font-size: 11px;
     color: #ebebeb;
     padding: 0 8 0 8px;
-    margin-top: 3px;
-    margin-bottom: 3px;
-    min-width: 0em; 
+    margin-top: 0px;
+    margin-bottom: 0px;
+    min-width: 0em;
 }
 #workspaces button.focused {
     color: #111827;
-    margin-top: 3px;
-    margin-bottom: 3px;
+    margin-top: 0px;
+    margin-bottom: 0px;
     background-color: #8abae1;
 }
 #pulseaudio {
@@ -141,14 +126,7 @@
     margin-top: 3px;
     margin-bottom: 3px;
 }
-#network {
-    color: #b1c89d;
-    font-size: 11px;
-    padding: 0 8 0 8px;
-    margin-top: 3px;
-    margin-left: 3px;
-    margin-bottom: 2px;
-}
+
 #tray {
     padding: 0 8 0 8px;
     margin-top: 3px;
