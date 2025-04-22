@@ -1,18 +1,12 @@
 {
-    "layer": "top", // Waybar at top layer
-    "position": "top", // Waybar position (top|bottom|left|right)
+    "layer": "top",
+    "position": "top",
     "output": "DP-1",
-    
-     "height": 24, // Waybar height (to be removed for auto height)
-    // Archived modules
-    // "custom/gpu",  "custom/weather","sway/window", "custom/gpu",  "custom/media",  
-    // Choose the order of the modules
-
+     "height": 22,
     "modules-left": ["sway/workspaces","custom/playerctl","custom/cava_mviz"],
     "modules-center": ["sway/window","sway/mode"],
     "modules-right": ["pulseaudio","clock#time","custom/scratchpad_indicator","tray",],
-    
-    // Modules configuration
+
     "sway/workspaces": {
         "disable-scroll": true,
         "all-outputs": false,
@@ -33,14 +27,6 @@
         "exec": "$HOME/.config/waybar/custom_modules/WaybarCava.sh",
         "format": "{}",
         "tooltip": false
-    },
-    "custom/context": {
-        "format": "<span color=\"#eeeeee\"></span>",
-        "on-click": "~/.local/bin/swww_wallpapers.sh",
-        "on-click-middle": "alacritty -o 'window.opacity=0.4' -e cava",
-        "on-click-right": "wlogout",
-        "tooltip": false,
-        "interval": 0
     },
     "sway/mode": {
         "format": "<span style=\"italic\"> {} </span>"
@@ -65,43 +51,6 @@
         "on-click": "foot -c ~/.config/foot/foot-opacity.ini -e calcurse",
         "on-click-middle": "~/.local/bin/waybar-scripts/cleartrash.sh"
     },
-    "temperature": {
-        //"thermal-zone": 1,
-        "interval": "15",
-        "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
-        "critical-threshold": 75,
-        "format-critical": "  {temperatureC}°C",
-        "format": "{icon} {temperatureC}°C",
-        "format-icons": ["", "", ""],
-        "max-length": 6,
-        "min-length": 6,
-        "tooltip": false
-    },
-    "cpu": {
-        "interval": 15,      
-        "format": " {usage:2}%",
-        "tooltip": false
-    },
-    "memory": {
-        "interval": 15,
-        "format": "  {percentage}%",
-        "tooltip": false
-    },
-    "network": {
-        // "interface": "wlan0", // (Optional) To force the use of this interface,
-        "interval": 15,
-        "format-wifi": "<span color=\"#a97ea1\">󰤨  Starlink</span>",
-        "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "󰤨 ",
-        "format-alt": "󰤨  {ipaddr}",
-        "family": "ipv4",
-        "tooltip-format-wifi": "󰤨  {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\n {bandwidthUpBits}  {bandwidthDownBits}",
-        "tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n {bandwidthUpBits}  {bandwidthDownBits}",
-        "on-click-right": "nm-connection-editor",
-        "on-click-middle": "~/.local/bin/waybar-scripts/wifimenu.py"
-    },
-// essid for format wifi
     "pulseaudio": {
         "scroll-step": 5, // %, can be a float
         "format": "{icon} {volume:2}% {format_source}",
@@ -144,49 +93,4 @@
         "on-click-right": "swaymsg 'scratchpad show'",
         "tooltip": false
     },
-    "custom/arrow1": {
-        "format": "",
-        "tooltip": false
-    },
-    "custom/arrow2": {
-        "format": "",
-        "tooltip": false,
-    },
-    "custom/arrow3": {
-        "format": "",
-        "tooltip": false
-    },
-    "custom/arrow4": {
-        "format": "",
-        "tooltip": false
-    },
-    "custom/arrow5": {
-        "format": "",
-        "tooltip": false
-    },
-
-    "custom/arrow6": {
-        "format": "",
-        "tooltip": false
-    },
-
-    "custom/arrow7": {
-        "format": "",
-        "tooltip": false
-    },
-
-    "custom/arrow8": {
-        "format": "",
-        "tooltip": false
-    },
-
-    "custom/arrow9": {
-        "format": "",
-        "tooltip": false
-    },
-
-    "custom/arrow10": {
-        "format": "",
-        "tooltip": false
-    } 
 }
