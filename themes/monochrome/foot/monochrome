@@ -1,0 +1,26 @@
+# -*- conf -*-
+# Nordiq
+
+[cursor]
+color=101010 c0c8d8
+
+[colors]
+alpha=0.77
+foreground=ebebeb
+background=000000
+regular0=111827
+regular1=ec8989
+regular2=c9d36a
+regular3=ceb581
+regular4=8abae1
+regular5=db9fe9
+regular6=abebe2
+regular7=f9fafb
+bright0=f9fafb
+bright1=ffc4c4
+bright2=eff6ab
+bright3=ffe6b5
+bright4=c9e6fd
+bright5=f7d7ff
+bright6=ddfcf8
+bright7=ebebeb
