@@ -1,0 +1,65 @@
+window {
+  background-color: #000000;
+  background-image: url("file:///home/user/Pictures/Wallpapers/swww/hand.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#window-box {
+  background-color: alpha(#000000, 0.66);
+  border-radius: 35px;
+  padding: 40 3.5em;
+}
+
+#clock-label {
+  color: #ebebeb;
+  min-width: 320px;
+  font-weight: 500;
+  font-size: 9pt;
+  padding: 10px 30px;
+  margin-bottom: -5px;
+  margin-top: 0px;
+}
+
+#date-label {
+  color: #c0c8d8;
+}
+/* hide "Password:" label */
+#input-label {
+  font-size: 0pt;
+}
+
+#user-name {
+  font-size: 0pt;
+}
+
+#input-field {
+  color: alpha(#c0c8d8, 0.8);
+  background-color: alpha(#000000, 0);
+  border: 0px solid transparent;
+  box-shadow: none;
+  border-radius: 10px;
+  margin-top: 6px;
+  padding: 2.5px 15px;
+  outline: none;
+}
+#input-field:focus {
+  border: 0px solid transparent;
+  outline: none;
+}
+
+#warning-label,
+#error-label,
+#unlock-button {
+  margin-top: 12px;
+  padding: 10px 2rem;
+}
+
+#unlock-button {
+  padding: 4px 15px;
+  border-radius: 10px;
+  background-color: alpha(#101010, 0);
+  color: alpha(#c0c8d8, 1);
+  border-radius: 10px;
+}
